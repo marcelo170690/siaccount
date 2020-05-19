@@ -1,2 +1,2 @@
 # siaccount
-Aplicación para la gestión de email y sus sub cuentas 
+Aplicación para la cuentas y sub cuentas
