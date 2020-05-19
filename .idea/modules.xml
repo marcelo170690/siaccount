@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/appaccount.iml" filepath="$PROJECT_DIR$/.idea/appaccount.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../induction/.idea/induction.iml" filepath="$PROJECT_DIR$/../induction/.idea/induction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../labmat/.idea/labmat.iml" filepath="$PROJECT_DIR$/../labmat/.idea/labmat.iml" />
+    </modules>
+  </component>
+</project>
