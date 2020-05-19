@@ -37948,7 +37948,7 @@ var render = function() {
       { staticClass: "navbar navbar-expand-md navbar-dark bg-dark shadow-sm" },
       [
         _c("a", { staticClass: "navbar-brand", attrs: { href: "/" } }, [
-          _vm._v("\n            Sistema de Cuentas\n        ")
+          _vm._v("\n            SIACCOUNT\n        ")
         ]),
         _vm._v(" "),
         _vm._m(0),
@@ -38126,6 +38126,21 @@ var render = function() {
                     attrs: { type: "password" },
                     domProps: { value: _vm.password },
                     on: {
+                      keyup: function($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k(
+                            $event.keyCode,
+                            "enter",
+                            13,
+                            $event.key,
+                            "Enter"
+                          )
+                        ) {
+                          return null
+                        }
+                        return _vm.login($event)
+                      },
                       input: function($event) {
                         if ($event.target.composing) {
                           return

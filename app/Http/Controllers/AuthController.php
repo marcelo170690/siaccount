@@ -17,14 +17,17 @@ class AuthController extends Controller
     }
 
     public function login(LoginUser $request){
-        $user = User::where([
-            ['email', $request->email],
-            ['password' , Hash::check('plain-text', $request->password)]
-        ])->get();
-        if (count($user)==0)
+        $user = User::where('email', $request->email)->first();
+        if ($user){
+            if (Hash::check($request->password, $user->password)) {
+                Auth::login($user->first());
+                return $user;
+            }else{
+                return response('Verifique la contraseña', 401);
+            }
+        }else{
             return response('Las credenciales ingresadas no son correctas', 401);
-        Auth::login($user->first());
-        return $user;
+        }
     }
 
     public function logout()

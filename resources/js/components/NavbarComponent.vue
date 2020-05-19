@@ -2,7 +2,7 @@
     <div>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <a class="navbar-brand" href="/">
-                Sistema de Cuentas
+                SIACCOUNT
             </a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true">
                 <span class="navbar-toggler-icon"></span>
@@ -56,7 +56,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Contraseña</span>
                             </div>
-                            <input type="password" class="form-control" v-model="password">
+                            <input type="password" class="form-control" v-model="password" @keyup.enter="login">
                         </div>
                         <span v-if="errors.password" class="text-danger">
                             {{errors.password[0]}}
